@@ -26,15 +26,15 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
-
-
-
-
-
-
-
+COUNT=zeros(1,K);
+SUM=zeros(K, n);
+for i=1:m
+    SUM(idx(i),:)=SUM(idx(i),:)+X(i,:);
+    COUNT(idx(i))=COUNT(idx(i))+1;
+end
+for i=1:K
+    centroids(i,:)=SUM(i,:)/COUNT(i);
+end
 % =============================================================
-
-
 end
 

@@ -116,7 +116,7 @@ A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
 % Size of the image
 img_size = size(A);
 
-% Reshape the image into an Nx3 matrix where N = number of pixels.
+% Reshape the image into an Nx3 matrix where N = number of pixels. 
 % Each row will contain the Red, Green and Blue pixel values
 % This gives us our dataset matrix X that we will use K-Means on.
 X = reshape(A, img_size(1) * img_size(2), 3);
